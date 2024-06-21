@@ -1,0 +1,95 @@
+<DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable con Texto</title>
+    <style>
+       
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        body{
+           background-image: url("m.jpg");
+           background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div{
+            max-width: 900px;
+            margin: auto;
+            background-color: #333;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+
+        .menu{
+            display: inline;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu  li  a{
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+           
+        }
+        .menu > li:hover{
+            background-color: red;
+        }
+           
+        .submenu{
+            position: absolute;
+            display: none;
+            list-style: none;
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .menu li:hover .submenu {
+            display: block;
+        }
+        .menu li:hover{
+        background-color: rgba(0, 0, 0, 0.432);
+       
+        }
+        .menu li a{
+        display: block;
+        color: white;
+        padding: 15px 15px 15px 20px;
+        text-decoration: none;
+        }
+        #textoMostrado {
+            margin-top: 20px;
+            font-size: 14px;
+            background-color: rgba(240, 248, 255, 0.708);
+        }
+        .titulo{
+            padding: 15px 15px 15px 20px;
+            margin-top: 20px;
+            background-color: rgba(229, 236, 130, 0.708);
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo">
+        <h1  style="display: inline-block; margin-right: 120px;">Tienda "Alex"</h1>
+        <h3 align="right" style="display: inline-block;">Ubicacion<br></h3>
+    </div>
+    <div class="menu" >
+        <ul>
+            <li style="display: inline-block;">
+                <a href="#">ubicacion</a>
+                <ul class="submenu">
+                    <li><a href="img.html" data-texto="1">Imagenes de referencia</a></li>
+                    <li><a href="comll.html" data-texto="2">Como llegar</a></li>
+                    <li><a href="num.html" data-texto="4">Numero</a></li>
+                </ul>
+            </li>
+    </div>
+    <br><br><br><br>

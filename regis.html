@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+     body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #3498db;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    </style>
+</head>
+<body>
+    <center>
+        <form action="index.html" method="post" onsubmit="enviarFormulario()">
+            <label for="nombre">Nombre completo:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+          
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br>
+          
+            <label for="contraseña">Contraseña:</label><br>
+            <input type="password" id="contraseña" name="contraseña" required><br>
+          
+            <label for="confirmar_contraseña">Confirmar contraseña:</label><br>
+            <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" required><br><br>
+          
+            <label for="calificacion">Calificación:</label><br>
+            <select id="calificacion" name="calificacion">
+              <option value="Muy bueno">Muy bueno</option>
+              <option value="Bueno">Bueno</option>
+              <option value="Regular">Regular</option>
+              <option value="Malo">Malo</option>
+            </select><br><br>
+              
+            <input type="submit" value="Enviar">
+        </form>
+        <div class="container">
+        <div class="box">A</div>
+        <div class="box">L</div>
+        <div class="box">E</div>
+        <div class="box">X</div>
+      </div>
+    </center>
+    
+    
+      <script>
+        function cambiarColor(event) {
+          const colores = ["#FF5733", "#33FF57", "#5733FF", "#FF3357", "#33FFC1", "#336CFF"];
+          const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+          event.target.style.backgroundColor = colorAleatorio;
+        }
+    
+        document.querySelectorAll('.box').forEach(box => {
+          box.addEventListener('click', cambiarColor);
+        });
+      </script>
+</body>
+</html>
